@@ -1,6 +1,24 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   /* margin: 0 auto;
   padding: 2rem;
   text-align: center; */
+}
+* {
+  /* max-width: 425px; */
+  /* padding: 0 1px; */
+}
+
+:root {
+  --red: #FF6060;
+  /* --secondary-color: #6c757d; */
+}
+
+body {
+  margin: 0;
+}
+
+.margin-body {
+  margin: 8px;
+  padding: 0 1px;
 }

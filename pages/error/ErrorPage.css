@@ -1,0 +1,24 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+.error h1 {
+    font-size: xxx-large;
+    color: var(--red);
+}
+
+.error h3 {
+    text-align: center;
+    color: var(--red);
+}
+
+.error a {
+    color: black;
+}
