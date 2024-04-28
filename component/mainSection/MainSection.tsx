@@ -1,6 +1,8 @@
 import React from "react";
+
 import "./MainSection.css";
-// import data from '.../data.json'
+import data from '../../data.json'
+import Card from "../cardComponent/Card";
 
 console.log('first', data)
 
@@ -12,10 +14,7 @@ const MainSection = () => {
                     <p>Chez vous, partout et ailleurs</p>
                 </div>
                 <section className="appartement">
-                    <div className="card">
-                        <p>Titre de la location</p>
-                    </div>
-                    <div className="card"></div>
+                    {data.map((card) => <Card key={card.id} title={card.title} cover={card.cover}/>)}
                 </section>
             </div>
             

@@ -11,7 +11,8 @@
 
 :root {
   --red: #FF6060;
-  /* --secondary-color: #6c757d; */
+  --min_tablet: 768px;
+
 }
 
 body {
@@ -21,4 +22,13 @@ body {
 .margin-body {
   margin: 8px;
   padding: 0 1px;
+
+  @media (min-width: 768px) {
+    padding: 10px 50px;
+  }
+
+  /* @media (min-width: 1200px) {
+    padding: 10px 50px;
+  } */
+
 }

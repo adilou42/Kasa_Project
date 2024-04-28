@@ -1,0 +1,20 @@
+.card {
+    /* background-color: var(--red); */
+    /* background-image: linear-gradient(to bottom, transparent, transparent, #000000 ),url('https://picsum.photos/200/300'); */
+    /* background-image: url('/IMG.png'); */
+
+    height: 255px;
+    margin-top: 25px;
+    border-radius: 15px;
+    position: relative;
+    background-position: center;
+}
+
+.card p {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+}
