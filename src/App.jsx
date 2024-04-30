@@ -6,12 +6,12 @@ import React from "react";
 import HomePage from "../pages/Home/HomePage.tsx";
 import AboutPage from "../pages/About/AboutPage.tsx";
 import Footer from "../component/footer/Footer.tsx";
-import ErrorPage from "../pages/error/ErrorPage.tsx";
+import ErrorPage from "../pages/Error/ErrorPage.tsx";
 
 function App() {
     return (
-        <div>
-            <div className="margin-body">
+        <div >
+            <div className="margin-body" >
                 <Header />
                 <Routes>
                     <Route path="/" element={<HomePage />} />

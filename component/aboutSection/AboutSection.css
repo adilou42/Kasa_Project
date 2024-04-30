@@ -6,6 +6,10 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/About-image.png');
     background-size: cover;
     background-position: center;
+
+    @media (min-width:1024px) {
+        height: 150px;
+    }
 }
 
 .burger {
@@ -14,9 +18,15 @@
     flex-direction: column;
     gap: 25px;
 
-    @media (min-width: var(--min_tablet)) {
+    @media (min-width: 768px) and (max-width: 1023px) {
         padding-left: 30px;
         padding-right: 30px;
+    }
+
+    @media (min-width:1024px) {
+        padding-left: 50px;
+        padding-right: 50px;
+        
     }
 }
 
