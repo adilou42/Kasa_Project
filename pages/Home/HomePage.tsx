@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "../../component/header/Header";
-import MainSection from "../../component/mainSection/MainSection";
+import HomeSection from "../../component/mainSection/HomeSection";
 import Footer from "../../component/footer/Footer";
 
 const HomePage = () => {
     return (
         <div>
-            <MainSection />
+            <HomeSection />
         </div>
     );
 };

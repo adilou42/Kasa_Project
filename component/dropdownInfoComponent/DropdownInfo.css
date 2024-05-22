@@ -1,4 +1,4 @@
-.image-about {
+/* .image-about {
     width: 100%;
     height: 110px;
     margin-top: 20px;
@@ -28,7 +28,7 @@
         padding-right: 50px;
         
     }
-}
+} */
 
 .title {
     width: 100%;
@@ -56,7 +56,7 @@
 .text {
     display: none;
     background-color: #fbfbfb;
-    margin-top: -25px;
+    /* margin-top: -25px; */
     font-size: x-small;
 }
 

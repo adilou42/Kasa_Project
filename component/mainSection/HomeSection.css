@@ -10,8 +10,12 @@
     display: flex;
     justify-content: flex-start;
 
-    @media (min-width: 758px) {
+    @media (min-width: 768px) {
         justify-content: center;
+    }
+
+    @media (min-width:1024px) {
+        height: 16vh;
     }
 }
 
@@ -23,5 +27,24 @@
     margin-left: 10px;
 }
 
+.appartement {
+    display: flex;
+    flex-direction: column;
 
+    @media (min-width:768px)  {
+        
+        background-color: #F6F6F6;
+        padding: 10px 30px 30px 30px;
+        margin-top: 30px;
 
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    @media (min-width:1024px) {
+        gap: 55px;
+        
+    }
+
+}

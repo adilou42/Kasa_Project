@@ -12,7 +12,6 @@
 :root {
   --red: #FF6060;
   --min-tablet: 768px;
-
 }
 
 body {
@@ -31,4 +30,11 @@ body {
     padding: 10px 50px;
   } */
 
+}
+
+.big-div {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }

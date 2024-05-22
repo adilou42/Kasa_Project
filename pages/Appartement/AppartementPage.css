@@ -1,0 +1,116 @@
+.appart-img {
+    position: relative;
+}
+
+.appart-img img {
+    height: 255px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.left-chevron {
+    position: absolute;
+    left: 15px;
+    top: 110px;
+    color: white;
+    font-size: 30px;
+}
+
+.right-chevron {
+    position: absolute;
+    right: 15px;
+    top: 110px;
+    color: white;
+    font-size: 30px;
+}
+
+.appart-img p {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    right: 50%;
+}
+
+.appart-title {
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+
+}
+
+.appart-title h1 {
+    color: var(--red);
+    font-size: 20px;
+}
+
+.appart-title h3 {
+    margin-top: -15px;
+    font-size: 15px;
+}
+
+.appart-tags {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: -20px;
+}
+
+.appart-tags p {
+    color: white;
+    background-color: var(--red);
+    padding-left: 13px;
+    padding-right: 13px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.profil-host img {
+    border-radius: 30px;
+    height: 50px;
+}
+
+.host-name {
+    color: var(--red);
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-end; */
+}
+
+.lastname {
+    margin-top: -15px;
+}
+
+.profil-host {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profil {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profil-stars {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.grey-star {
+    color: #E3E3E3;
+}
+
+.red-star {
+    color: var(--red);
+}
