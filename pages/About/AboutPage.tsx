@@ -1,8 +1,6 @@
 import React from "react";
-import Header from "../../component/header/Header";
-import Footer from "../../component/footer/Footer";
-import "./AboutPage.css";
 import DropdownInfo from "../../component/dropdownInfoComponent/DropdownInfo";
+import "./AboutPage.css";
 
 const description = [
     {

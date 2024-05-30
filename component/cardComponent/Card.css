@@ -5,17 +5,10 @@
     border-radius: 15px;
     position: relative;
     background-position: center;
-    /* background-image: linear-gradient(to bottom, transparent, transparent, #000000 ); */
-
-    @media (min-width:768px) and (max-width: 1023px) {
-        width: 45%;
-    }
 
     @media (min-width:1024px) {
-        width: 29%;
-        height: 300px;
+        height: 350px;
     }
-
 }
 
 .card p {

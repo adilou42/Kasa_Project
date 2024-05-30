@@ -2,7 +2,7 @@ import React from "react";
 
 import "./DropdownInfo.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
+import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 const toggleText = (event) => {
     const titleDiv = event.currentTarget;

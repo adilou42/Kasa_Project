@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
 import data from "../../data.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,8 +11,6 @@ import "./AppartementPage.css";
 import DropdownInfo from "../../component/dropdownInfoComponent/DropdownInfo";
 
 const AppartementPage = (description: string) => {
-    // console.log("data", data);
-
     const { id } = useParams();
 
     const item = data.find((item) => item.id === id);
@@ -31,62 +29,68 @@ const AppartementPage = (description: string) => {
 
     const name = item.host.name;
     const [firstname, lastname] = name.split(" ");
+    const nbrPics = item.pictures.length;
+
+    const [currentPic, setCurrentPic] = useState(1);
+
+    function rightClick() {
+        setCurrentPic((prevPic) => {
+            let nextPic = prevPic + 1;
+            if (nextPic > nbrPics) {
+                nextPic = 1;
+            }
+            return nextPic;
+        });
+    }
+
+    function leftClick() {
+        setCurrentPic((prevPic) => {
+            let nextPic = prevPic - 1;
+            if (nextPic < 1) {
+                nextPic = nbrPics;
+            }
+            return nextPic;
+        });
+    }
 
     return (
         <div className="appart-block">
             <div className="appart-img">
-                <img src={item.pictures[0]} alt="picture" />
+                <img src={item.pictures[currentPic - 1]} alt="picture" />
                 <FontAwesomeIcon
                     icon={faChevronLeft}
                     className="left-chevron"
+                    onClick={leftClick}
                 />
                 <FontAwesomeIcon
                     icon={faChevronRight}
                     className="right-chevron"
+                    onClick={rightClick}
                 />
-                <p>1/4</p>
+                <p>
+                    {currentPic}/{nbrPics}
+                </p>
             </div>
-            <div className="appart-title">
-                <h1>{item.title}</h1>
-                <h3>{item.location}</h3>
-                <div className="appart-tags">
-                    {item.tags &&
-                        Array.isArray(item.tags) &&
-                        item.tags.map((tag) => <p key={tag}>{tag}</p>)}
-                </div>
-            </div>
-            <div className="profil">
-                <div className="profil-host">
-                    <div className="host-name">
-                        <p>{firstname}</p>
-                        {/* <p>Alexandre Dumas</p> */}
-                        <p className="lastname">{lastname}</p>
+            <div className="row">
+                <div className="appart-title">
+                    <h1>{item.title}</h1>
+                    <h3>{item.location}</h3>
+                    <div className="appart-tags">
+                        {item.tags.map((tag) => <p key={tag}>{tag}</p>)}
                     </div>
-                    <img src={item.host.picture} alt="host-picture" />
                 </div>
-                <div className="profil-stars">
-                    {redStars}
-                    {greyStars}
-                    {/* {Array.from({ length: 5 }, (_, i) =>
-                        i < Number(stars) ? (
-                            <FontAwesomeIcon
-                                key={i}
-                                icon={faStar}
-                                className="red-star"
-                            />
-                        ) : (
-                            <FontAwesomeIcon
-                                key={i}
-                                icon={faStar}
-                                className="grey-star"
-                            />
-                        )
-                    )} */}
-                    {/* <FontAwesomeIcon icon={faStar} className="red-star" />
-                    <FontAwesomeIcon icon={faStar} />
-                    <FontAwesomeIcon icon={faStar} />
-                    <FontAwesomeIcon icon={faStar} />
-                    <FontAwesomeIcon icon={faStar} className="grey-star" /> */}
+                <div className="profil">
+                    <div className="profil-host">
+                        <div className="host-name">
+                            <p>{firstname}</p>
+                            <p className="lastname">{lastname}</p>
+                        </div>
+                        <img src={item.host.picture} alt="host-picture" />
+                    </div>
+                    <div className="profil-stars">
+                        {redStars}
+                        {greyStars}
+                    </div>
                 </div>
             </div>
             <div className="description">

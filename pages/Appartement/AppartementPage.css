@@ -1,11 +1,16 @@
 .appart-img {
     position: relative;
+    margin-top: 20px;
 }
 
 .appart-img img {
     height: 255px;
     width: 100%;
     border-radius: 15px;
+
+    @media (min-width: 1024px) {
+        height: 350px;
+    }
 }
 
 .left-chevron {
@@ -14,6 +19,10 @@
     top: 110px;
     color: white;
     font-size: 30px;
+
+    @media (min-width: 1024px) {
+        top: 150px;
+    }
 }
 
 .right-chevron {
@@ -22,6 +31,10 @@
     top: 110px;
     color: white;
     font-size: 30px;
+
+    @media (min-width: 1024px) {
+        top: 150px;
+    }
 }
 
 .appart-img p {
@@ -71,9 +84,6 @@
 
 .host-name {
     color: var(--red);
-    /* display: flex;
-    flex-direction: column;
-    justify-content: flex-end; */
 }
 
 .lastname {
@@ -93,6 +103,10 @@
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
+
+    @media (min-width:1024px) {
+        flex-direction: column;
+    }
 }
 
 .profil-stars {
@@ -105,6 +119,10 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
+
+    @media (min-width:1024px) {
+        flex-direction: row;
+    }
 }
 
 .grey-star {
@@ -113,4 +131,20 @@
 
 .red-star {
     color: var(--red);
+}
+
+.row {
+    @media (min-width:1024px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .description > * {
+        width: 50%;
+    }
 }

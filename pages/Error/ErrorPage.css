@@ -23,14 +23,8 @@
 .error h3 {
     text-align: center;
     color: var(--red);
-    /* @media (min-width: 768px) {
-        font-size: 30px;
-    } */
 }
 
 .error a {
     color: black;
-    /* @media (min-width: 768px) {
-        font-size: 30px;
-    } */
 }

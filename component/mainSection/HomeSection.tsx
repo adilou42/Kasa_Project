@@ -3,9 +3,6 @@ import React from "react";
 import "./HomeSection.css";
 import data from "../../data.json";
 import Card from "../cardComponent/Card";
-import { Link } from "react-router-dom";
-
-// console.log('first', data)
 
 const HomeSection = () => {
     return (
