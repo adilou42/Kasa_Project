@@ -25,12 +25,13 @@
     display: none;
     background-color: #fbfbfb;
     font-size: x-small;
-    margin-top: -15px;
+    margin-top: 35px;
 }
 
 .text p {
     font-size: 15px;
     padding: 10px 5px;
+    margin-top: -35px;
 }
 
 .rotate {

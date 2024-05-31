@@ -1,13 +1,12 @@
-import { Route, Router, Routes } from "react-router-dom";
-import Header from "../component/header/Header.tsx";
-import HomeSection from "../component/mainSection/HomeSection.tsx";
-import "./App.css";
 import React from "react";
-import HomePage from "../pages/Home/HomePage.tsx";
-import AboutPage from "../pages/About/AboutPage.tsx";
-import Footer from "../component/footer/Footer.tsx";
-import ErrorPage from "../pages/Error/ErrorPage.tsx";
-import AppartementPage from "../pages/Appartement/AppartementPage.tsx";
+import { Route, Routes } from "react-router-dom";
+import Footer from "./component/footer/Footer.tsx";
+import Header from "./component/header/Header.tsx";
+import AboutPage from "./pages/About/AboutPage.tsx";
+import AppartementPage from "./pages/Appartement/AppartementPage.tsx";
+import ErrorPage from "./pages/Error/ErrorPage.tsx";
+import HomePage from "./pages/Home/HomePage.tsx";
+import "./App.css";
 
 function App() {
     return (

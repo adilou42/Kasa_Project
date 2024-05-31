@@ -1,8 +1,7 @@
-import React from "react";
 
-import "./HomeSection.css";
-import data from "../../data.json";
+import data from "../../../data.json";
 import Card from "../cardComponent/Card";
+import "./HomeSection.css";
 
 const HomeSection = () => {
     return (

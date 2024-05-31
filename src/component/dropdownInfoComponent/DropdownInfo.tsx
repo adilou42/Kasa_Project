@@ -1,10 +1,9 @@
-import React from "react";
 
-import "./DropdownInfo.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./DropdownInfo.css";
 
-const toggleText = (event) => {
+const toggleText = (event:any) => {
     const titleDiv = event.currentTarget;
     const textDiv = titleDiv.nextElementSibling;
     const icon = titleDiv.querySelector(".icon");

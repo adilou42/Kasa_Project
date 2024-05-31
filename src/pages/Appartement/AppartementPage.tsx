@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import { Navigate, useParams } from "react-router-dom";
-import data from "../../data.json";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faChevronLeft,
     faChevronRight,
     faStar,
 } from "@fortawesome/free-solid-svg-icons";
-import "./AppartementPage.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
+import { Navigate, useParams } from "react-router-dom";
+import data from "../../../data.json";
 import DropdownInfo from "../../component/dropdownInfoComponent/DropdownInfo";
+import "./AppartementPage.css";
 
-const AppartementPage = (description: string) => {
+const AppartementPage = () => {
     const { id } = useParams();
 
     const item = data.find((item) => item.id === id);
@@ -57,26 +57,32 @@ const AppartementPage = (description: string) => {
         <div className="appart-block">
             <div className="appart-img">
                 <img src={item.pictures[currentPic - 1]} alt="picture" />
-                <FontAwesomeIcon
-                    icon={faChevronLeft}
-                    className="left-chevron"
-                    onClick={leftClick}
-                />
-                <FontAwesomeIcon
-                    icon={faChevronRight}
-                    className="right-chevron"
-                    onClick={rightClick}
-                />
-                <p>
-                    {currentPic}/{nbrPics}
-                </p>
+                {nbrPics > 1 && (
+                    <>
+                        <FontAwesomeIcon
+                            icon={faChevronLeft}
+                            className="left-chevron"
+                            onClick={leftClick}
+                        />
+                        <FontAwesomeIcon
+                            icon={faChevronRight}
+                            className="right-chevron"
+                            onClick={rightClick}
+                        />
+                        <p className="compteur">
+                            {currentPic}/{nbrPics}
+                        </p>
+                    </>
+                )}
             </div>
             <div className="row">
                 <div className="appart-title">
                     <h1>{item.title}</h1>
                     <h3>{item.location}</h3>
                     <div className="appart-tags">
-                        {item.tags.map((tag) => <p key={tag}>{tag}</p>)}
+                        {item.tags.map((tag) => (
+                            <p key={tag}>{tag}</p>
+                        ))}
                     </div>
                 </div>
                 <div className="profil">

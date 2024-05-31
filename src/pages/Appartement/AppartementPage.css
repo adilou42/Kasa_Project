@@ -148,3 +148,9 @@
         width: 50%;
     }
 }
+
+.compteur {
+    @media (max-width:767px) {
+        display: none;
+    }
+}
